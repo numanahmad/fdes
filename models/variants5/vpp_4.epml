@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.epml.de epml_12.xsd">
+  <coordinates xOrigin="leftToRight" yOrigin="topToBottom"/>
+  <epc epcId="1" name="4">
+    <function id="11">
+      <name>Online</name>
+      <graphics>
+        <position height="41" width="81" x="325" y="160"/>
+      </graphics>
+    </function>
+    <function id="13">
+      <name>Finish on film</name>
+      <graphics>
+        <position height="41" width="81" x="325" y="280"/>
+      </graphics>
+    </function>
+    <function id="87">
+      <name>Prepare tape</name>
+      <graphics>
+        <position height="41" width="81" x="325" y="95"/>
+      </graphics>
+    </function>
+    <function id="105">
+      <name>Record DFM</name>
+      <graphics>
+        <position height="41" width="81" x="325" y="220"/>
+      </graphics>
+    </function>
+    <arc id="119">
+      <graphics>
+        <position x="365" y="261"/>
+        <position x="365" y="280"/>
+      </graphics>
+      <flow source="105" target="13"/>
+    </arc>
+    <arc id="120">
+      <graphics>
+        <position x="365" y="201"/>
+        <position x="365" y="220"/>
+      </graphics>
+      <flow source="11" target="105"/>
+    </arc>
+    <arc id="121">
+      <graphics>
+        <position x="365" y="136"/>
+        <position x="365" y="160"/>
+      </graphics>
+      <flow source="87" target="11"/>
+    </arc>
+    <function id="122">
+      <graphics>
+        <position height="41" width="81" x="325" y="30"/>
+      </graphics>
+      <name>Input</name>
+    </function>
+    <function id="123">
+      <graphics>
+        <position height="41" width="81" x="325" y="350"/>
+      </graphics>
+      <name>Output</name>
+    </function>
+    <arc id="124">
+      <graphics>
+        <position x="365" y="71"/>
+        <position x="365" y="95"/>
+      </graphics>
+      <flow source="122" target="87"/>
+    </arc>
+    <arc id="125">
+      <graphics>
+        <position x="365" y="321"/>
+        <position x="365" y="350"/>
+      </graphics>
+      <flow source="13" target="123"/>
+    </arc>
+  </epc>
+</epml:epml>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.epml.de epml_12.xsd">
+  <coordinates xOrigin="leftToRight" yOrigin="topToBottom"/>
+  <epc epcId="1" name="1">
+    <function id="9">
+      <name>Prepare film for editing</name>
+      <graphics>
+        <position height="41" width="81" x="355" y="115"/>
+      </graphics>
+    </function>
+    <function id="11">
+      <name>Negmatching</name>
+      <graphics>
+        <position height="41" width="81" x="355" y="180"/>
+      </graphics>
+    </function>
+    <function id="12">
+      <name>Tranfer in telecine</name>
+      <graphics>
+        <position height="41" width="81" x="265" y="355"/>
+      </graphics>
+    </function>
+    <function id="13">
+      <name>Finish on film</name>
+      <graphics>
+        <position height="41" width="81" x="435" y="355"/>
+      </graphics>
+    </function>
+    <arc id="22">
+      <graphics>
+        <position x="395" y="76"/>
+        <position x="395" y="115"/>
+      </graphics>
+      <flow source="87" target="9"/>
+    </arc>
+    <xor id="58">
+      <graphics>
+        <position height="21" width="21" x="385" y="255"/>
+      </graphics>
+      <name/>
+    </xor>
+    <function id="67">
+      <name>Finish on tape</name>
+      <graphics>
+        <position height="41" width="81" x="265" y="420"/>
+      </graphics>
+    </function>
+    <xor id="68">
+      <graphics>
+        <position height="21" width="21" x="395" y="490"/>
+      </graphics>
+      <name/>
+    </xor>
+    <arc id="57">
+      <graphics>
+        <position x="395" y="156"/>
+        <position x="395" y="180"/>
+      </graphics>
+      <flow source="9" target="11"/>
+    </arc>
+    <arc id="59">
+      <graphics>
+        <position x="395" y="221"/>
+        <position x="395" y="255"/>
+      </graphics>
+      <flow source="11" target="58"/>
+    </arc>
+    <arc id="62">
+      <graphics>
+        <position x="385" y="276"/>
+        <position x="305" y="355"/>
+      </graphics>
+      <flow source="58" target="12"/>
+    </arc>
+    <arc id="63">
+      <graphics>
+        <position x="406" y="276"/>
+        <position x="475" y="355"/>
+      </graphics>
+      <flow source="58" target="13"/>
+    </arc>
+    <arc id="69">
+      <graphics>
+        <position x="305" y="396"/>
+        <position x="305" y="420"/>
+      </graphics>
+      <flow source="12" target="67"/>
+    </arc>
+    <arc id="71">
+      <graphics>
+        <position x="305" y="461"/>
+        <position x="395" y="490"/>
+      </graphics>
+      <flow source="67" target="68"/>
+    </arc>
+    <arc id="72">
+      <graphics>
+        <position x="405" y="511"/>
+        <position x="405" y="530"/>
+      </graphics>
+      <flow source="68" target="88"/>
+    </arc>
+    <arc id="73">
+      <graphics>
+        <position x="475" y="396"/>
+        <position x="416" y="490"/>
+      </graphics>
+      <flow source="13" target="68"/>
+    </arc>
+    <function id="87">
+      <graphics>
+        <position height="41" width="81" x="355" y="35"/>
+      </graphics>
+      <name>Input</name>
+    </function>
+    <function id="88">
+      <graphics>
+        <position height="41" width="81" x="365" y="530"/>
+      </graphics>
+      <name>Output</name>
+    </function>
+  </epc>
+</epml:epml>
